@@ -1,0 +1,623 @@
+info:
+  _postman_id: 4d62e82e-30e5-4901-8e2c-4f7e06a48aa4
+  name: Test
+  schema: https://schema.getpostman.com/json/collection/v2.1.0/collection.json
+  _exporter_id: '25461182'
+  _collection_link: >-
+    https://blue-escape-255772.postman.co/workspace/Prakash~7bed0c36-397d-4ea8-aa92-535ce50fe626/collection/25461182-4d62e82e-30e5-4901-8e2c-4f7e06a48aa4?action=share&creator=25461182&source=collection_link
+item:
+  - name: doctor
+    item:
+      - name: apply_doctor
+        request:
+          auth:
+            type: bearer
+            bearer:
+              - key: token
+                value: >-
+                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDRiNDg5OWFiNDIxNTRiNzNmNjE1ZDYiLCJpYXQiOjE2ODI5MTQ2NTMsImV4cCI6MTcxNDQ3MjI1M30.LtSdIxCZEteQllfOeRRcvVVXXoRctTvPvod1g4URQBU
+                type: string
+          method: POST
+          header: []
+          body:
+            mode: raw
+            raw: |-
+
+              {
+                "firstName": "ravi",
+                "lastName":"sahoo",
+                "phoneNumber":"6317190934",
+                "website": "http://localhost:3001/apply_doctor_account",
+                "address": "siko",
+                "specialization": "cardiology",
+                "experience": "2",
+                "feePerCunsultation": 2500,
+                "timings": []
+              }
+            options:
+              raw:
+                language: json
+          url:
+            raw: localhost:3001/v1/users/apply_doctor_account
+            host:
+              - localhost
+            port: '3001'
+            path:
+              - v1
+              - users
+              - apply_doctor_account
+        response: []
+      - name: mark_notifications_as_seen
+        request:
+          auth:
+            type: bearer
+            bearer:
+              - key: token
+                value: >-
+                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDRiNDg5OWFiNDIxNTRiNzNmNjE1ZDYiLCJpYXQiOjE2ODI2NTU0ODEsImV4cCI6MTcxNDIxMzA4MX0.UoriJ5Bot6Oe3sJ8lT3_0r-0BHBosxtwxk1m4_U75WA
+                type: string
+          method: POST
+          header: []
+          body:
+            mode: raw
+            raw: |-
+
+              {
+                  "userId":"644b4899ab42154b73f615d6"
+              }
+            options:
+              raw:
+                language: json
+          url:
+            raw: localhost:3001/v1/users/mark_all_notifications_as_seen
+            host:
+              - localhost
+            port: '3001'
+            path:
+              - v1
+              - users
+              - mark_all_notifications_as_seen
+        response: []
+      - name: delete_notifications
+        request:
+          auth:
+            type: bearer
+            bearer:
+              - key: token
+                value: >-
+                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDRiNDg5OWFiNDIxNTRiNzNmNjE1ZDYiLCJpYXQiOjE2ODI2NTU0ODEsImV4cCI6MTcxNDIxMzA4MX0.UoriJ5Bot6Oe3sJ8lT3_0r-0BHBosxtwxk1m4_U75WA
+                type: string
+          method: POST
+          header: []
+          body:
+            mode: raw
+            raw: |-
+
+              {
+                    "userId":"644b4899ab42154b73f615d6"
+              }
+            options:
+              raw:
+                language: json
+          url:
+            raw: localhost:3001/v1/users/delete_all_notifications
+            host:
+              - localhost
+            port: '3001'
+            path:
+              - v1
+              - users
+              - delete_all_notifications
+        response: []
+      - name: get_approved_doctors
+        request:
+          auth:
+            type: bearer
+            bearer:
+              - key: token
+                value: >-
+                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDRiNDg5OWFiNDIxNTRiNzNmNjE1ZDYiLCJpYXQiOjE2ODI2NTU0ODEsImV4cCI6MTcxNDIxMzA4MX0.UoriJ5Bot6Oe3sJ8lT3_0r-0BHBosxtwxk1m4_U75WA
+                type: string
+          method: GET
+          header: []
+          url:
+            raw: >-
+              localhost:3001/v1/users/get_approved_doctors/644b4ffcc765fc1080a1d6d0
+            host:
+              - localhost
+            port: '3001'
+            path:
+              - v1
+              - users
+              - get_approved_doctors
+              - 644b4ffcc765fc1080a1d6d0
+        response: []
+      - name: book-appointment
+        request:
+          auth:
+            type: bearer
+            bearer:
+              - key: token
+                value: >-
+                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDRiNDg5OWFiNDIxNTRiNzNmNjE1ZDYiLCJpYXQiOjE2ODI2NTU0ODEsImV4cCI6MTcxNDIxMzA4MX0.UoriJ5Bot6Oe3sJ8lT3_0r-0BHBosxtwxk1m4_U75WA
+                type: string
+          method: POST
+          header: []
+          body:
+            mode: raw
+            raw: |-
+              {
+                  "userId":"644b4899ab42154b73f615d6",
+                  "doctorId":"644b4ffcc765fc1080a1d6d0"
+              }
+            options:
+              raw:
+                language: json
+          url:
+            raw: localhost:3001/v1/users/book_appointment
+            host:
+              - localhost
+            port: '3001'
+            path:
+              - v1
+              - users
+              - book_appointment
+        response: []
+      - name: check-booking-avilability
+        request:
+          auth:
+            type: bearer
+            bearer:
+              - key: token
+                value: >-
+                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDRiNDg5OWFiNDIxNTRiNzNmNjE1ZDYiLCJpYXQiOjE2ODI2NTU0ODEsImV4cCI6MTcxNDIxMzA4MX0.UoriJ5Bot6Oe3sJ8lT3_0r-0BHBosxtwxk1m4_U75WA
+                type: string
+          method: POST
+          header: []
+          body:
+            mode: raw
+            raw: |-
+
+              {
+                  "doctorId":"644b4ffcc765fc1080a1d6d0",
+                  "date":"28/04/2023",
+                  "time":"14:04"
+              }
+            options:
+              raw:
+                language: json
+          url:
+            raw: localhost:3001/v1/users/check-booking-avilability
+            host:
+              - localhost
+            port: '3001'
+            path:
+              - v1
+              - users
+              - check-booking-avilability
+        response: []
+      - name: get_appointment
+        protocolProfileBehavior:
+          disableBodyPruning: true
+        request:
+          auth:
+            type: bearer
+            bearer:
+              - key: token
+                value: >-
+                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDRiNDg5OWFiNDIxNTRiNzNmNjE1ZDYiLCJpYXQiOjE2ODI2Nzc5MjAsImV4cCI6MTcxNDIzNTUyMH0.T1c8_Kzy17kVHoijo1AaSOYfPUQPGSjybXS4cvI1-8A
+                type: string
+          method: GET
+          header: []
+          body:
+            mode: raw
+            raw: ''
+            options:
+              raw:
+                language: json
+          url:
+            raw: localhost:3001/v1/users/get_appointments/644b4899ab42154b73f615d6
+            host:
+              - localhost
+            port: '3001'
+            path:
+              - v1
+              - users
+              - get_appointments
+              - 644b4899ab42154b73f615d6
+        response: []
+      - name: get_doctors
+        protocolProfileBehavior:
+          disableBodyPruning: true
+        request:
+          auth:
+            type: bearer
+            bearer:
+              - key: token
+                value: >-
+                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDRiNDg5OWFiNDIxNTRiNzNmNjE1ZDYiLCJpYXQiOjE2ODI2Nzc5MjAsImV4cCI6MTcxNDIzNTUyMH0.T1c8_Kzy17kVHoijo1AaSOYfPUQPGSjybXS4cvI1-8A
+                type: string
+          method: GET
+          header: []
+          body:
+            mode: raw
+            raw: |-
+
+              {
+                  "userId":"644b4899ab42154b73f615d6"
+              }
+            options:
+              raw:
+                language: json
+          url:
+            raw: localhost:3001/v1/users/get_doctor
+            host:
+              - localhost
+            port: '3001'
+            path:
+              - v1
+              - users
+              - get_doctor
+        response: []
+      - name: get_doctor_info
+        protocolProfileBehavior:
+          disableBodyPruning: true
+        request:
+          auth:
+            type: bearer
+            bearer:
+              - key: token
+                value: >-
+                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDRiNDg5OWFiNDIxNTRiNzNmNjE1ZDYiLCJpYXQiOjE2ODI2Nzc5MjAsImV4cCI6MTcxNDIzNTUyMH0.T1c8_Kzy17kVHoijo1AaSOYfPUQPGSjybXS4cvI1-8A
+                type: string
+          method: GET
+          header: []
+          body:
+            mode: raw
+            raw: |-
+
+              {
+                  "doctorId":"644b4ffcc765fc1080a1d6d0"
+              }
+            options:
+              raw:
+                language: json
+          url:
+            raw: localhost:3001/v1/users/get_doctor_info
+            host:
+              - localhost
+            port: '3001'
+            path:
+              - v1
+              - users
+              - get_doctor_info
+        response: []
+      - name: update_doctor_profile
+        request:
+          auth:
+            type: bearer
+            bearer:
+              - key: token
+                value: >-
+                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDRiNDg5OWFiNDIxNTRiNzNmNjE1ZDYiLCJpYXQiOjE2ODI2Nzc5MjAsImV4cCI6MTcxNDIzNTUyMH0.T1c8_Kzy17kVHoijo1AaSOYfPUQPGSjybXS4cvI1-8A
+                type: string
+          method: PUT
+          header: []
+          body:
+            mode: raw
+            raw: |-
+
+              {
+                    "userId":"644b4899ab42154b73f615d6",
+                    "firstName":"rakesh"
+
+              }
+            options:
+              raw:
+                language: json
+          url:
+            raw: localhost:3001/v1/users/update_doctor_profile
+            host:
+              - localhost
+            port: '3001'
+            path:
+              - v1
+              - users
+              - update_doctor_profile
+        response: []
+      - name: get_appointments_by_doctor_id
+        protocolProfileBehavior:
+          disableBodyPruning: true
+        request:
+          auth:
+            type: bearer
+            bearer:
+              - key: token
+                value: >-
+                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDRiNDg5OWFiNDIxNTRiNzNmNjE1ZDYiLCJpYXQiOjE2ODI2Nzc5MjAsImV4cCI6MTcxNDIzNTUyMH0.T1c8_Kzy17kVHoijo1AaSOYfPUQPGSjybXS4cvI1-8A
+                type: string
+          method: GET
+          header: []
+          body:
+            mode: raw
+            raw: |-
+
+              {
+                  "userId":"644b4899ab42154b73f615d6"
+              }
+            options:
+              raw:
+                language: json
+          url:
+            raw: localhost:3001/v1/users/get_appointments_by_doctor_id
+            host:
+              - localhost
+            port: '3001'
+            path:
+              - v1
+              - users
+              - get_appointments_by_doctor_id
+        response: []
+      - name: change-appointment-status
+        request:
+          auth:
+            type: bearer
+            bearer:
+              - key: token
+                value: >-
+                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDRiNDg5OWFiNDIxNTRiNzNmNjE1ZDYiLCJpYXQiOjE2ODI2Nzc5MjAsImV4cCI6MTcxNDIzNTUyMH0.T1c8_Kzy17kVHoijo1AaSOYfPUQPGSjybXS4cvI1-8A
+                type: string
+          method: POST
+          header: []
+          body:
+            mode: raw
+            raw: |-
+              {
+                  "appointmentId":"644b8f435880c4a316fb7fe1",
+                  "status":"approved"
+              }
+            options:
+              raw:
+                language: json
+          url:
+            raw: localhost:3001/v1/users/change-appointment-status
+            host:
+              - localhost
+            port: '3001'
+            path:
+              - v1
+              - users
+              - change-appointment-status
+        response: []
+      - name: get_all_doctors
+        request:
+          auth:
+            type: bearer
+            bearer:
+              - key: token
+                value: >-
+                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDRiNDg5OWFiNDIxNTRiNzNmNjE1ZDYiLCJpYXQiOjE2ODI2Nzc5MjAsImV4cCI6MTcxNDIzNTUyMH0.T1c8_Kzy17kVHoijo1AaSOYfPUQPGSjybXS4cvI1-8A
+                type: string
+          method: GET
+          header: []
+          url:
+            raw: localhost:3001/v1/users/get_all_doctors
+            host:
+              - localhost
+            port: '3001'
+            path:
+              - v1
+              - users
+              - get_all_doctors
+        response: []
+      - name: change-doctor-account-status
+        request:
+          auth:
+            type: bearer
+            bearer:
+              - key: token
+                value: >-
+                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDRiNDg5OWFiNDIxNTRiNzNmNjE1ZDYiLCJpYXQiOjE2ODI2Nzc5MjAsImV4cCI6MTcxNDIzNTUyMH0.T1c8_Kzy17kVHoijo1AaSOYfPUQPGSjybXS4cvI1-8A
+                type: string
+          method: POST
+          header: []
+          body:
+            mode: raw
+            raw: |-
+
+              {
+                  "doctorId":"644b4ffcc765fc1080a1d6d0",
+                  "status":"pending"
+              }
+            options:
+              raw:
+                language: json
+          url:
+            raw: localhost:3001/v1/users/change-doctor-account-status
+            host:
+              - localhost
+            port: '3001'
+            path:
+              - v1
+              - users
+              - change-doctor-account-status
+        response: []
+  - name: Signup
+    request:
+      method: POST
+      header: []
+      body:
+        mode: formdata
+        formdata:
+          - key: file
+            type: file
+            src: /home/prakashsamantaray/Downloads/download.jpeg
+          - key: username
+            value: pratap
+            type: text
+          - key: email
+            value: pratap123@gmail.com
+            type: text
+          - key: password
+            value: akki123
+            type: text
+      url:
+        raw: localhost:3001/v1/users/signUp
+        host:
+          - localhost
+        port: '3001'
+        path:
+          - v1
+          - users
+          - signUp
+    response: []
+  - name: Login
+    request:
+      method: POST
+      header: []
+      body:
+        mode: raw
+        raw: |-
+
+          {
+               "email":"pratap123@gmail.com",
+              "password":"akki123"
+          }
+        options:
+          raw:
+            language: json
+      url:
+        raw: localhost:3001/v1/users/login
+        host:
+          - localhost
+        port: '3001'
+        path:
+          - v1
+          - users
+          - login
+    response: []
+  - name: Logout
+    protocolProfileBehavior:
+      disableBodyPruning: true
+    request:
+      auth:
+        type: bearer
+        bearer:
+          - key: token
+            value: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDQ5ZWVmNGU5N2UyMTQwMWM4MzIzZDAiLCJpYXQiOjE2ODI1ODQ0NDAsImV4cCI6MTcxNDE0MjA0MH0.29v2H4NaEdUlT40W9HM7tJZLB17mW0kz6cCwl1GaEjk
+            type: string
+      method: GET
+      header: []
+      body:
+        mode: raw
+        raw: ''
+      url:
+        raw: localhost:3001/v1/users/logout
+        host:
+          - localhost
+        port: '3001'
+        path:
+          - v1
+          - users
+          - logout
+    response: []
+  - name: get_user
+    request:
+      auth:
+        type: bearer
+        bearer:
+          - key: token
+            value: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDQ5ZWVmNGU5N2UyMTQwMWM4MzIzZDAiLCJpYXQiOjE2ODI1ODQ0NDAsImV4cCI6MTcxNDE0MjA0MH0.29v2H4NaEdUlT40W9HM7tJZLB17mW0kz6cCwl1GaEjk
+            type: string
+      method: GET
+      header: []
+      url:
+        raw: localhost:3001/v1/users/get_user
+        host:
+          - localhost
+        port: '3001'
+        path:
+          - v1
+          - users
+          - get_user
+    response: []
+  - name: get_all_users
+    request:
+      method: GET
+      header: []
+      url:
+        raw: localhost:3001/v1/users/get_all_users
+        host:
+          - localhost
+        port: '3001'
+        path:
+          - v1
+          - users
+          - get_all_users
+    response: []
+  - name: update_user
+    request:
+      auth:
+        type: bearer
+        bearer:
+          - key: token
+            value: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDQ5ZWVmNGU5N2UyMTQwMWM4MzIzZDAiLCJpYXQiOjE2ODI1ODQ0NDAsImV4cCI6MTcxNDE0MjA0MH0.29v2H4NaEdUlT40W9HM7tJZLB17mW0kz6cCwl1GaEjk
+            type: string
+      method: PUT
+      header: []
+      body:
+        mode: raw
+        raw: |-
+
+          {
+              "email":"akki@909"
+          }
+        options:
+          raw:
+            language: json
+      url:
+        raw: localhost:3001/v1/users/update_user
+        host:
+          - localhost
+        port: '3001'
+        path:
+          - v1
+          - users
+          - update_user
+    response: []
+  - name: change_password
+    request:
+      auth:
+        type: bearer
+        bearer:
+          - key: token
+            value: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDRhMzgxYjEzMzRlYTk4ZjEyNjRiZjkiLCJpYXQiOjE2ODI1OTIxMDMsImV4cCI6MTcxNDE0OTcwM30.xDD4P-T0y7-75zRjD9khg4JlBiEUOMJsynlj9A4Gt5M
+            type: string
+      method: POST
+      header: []
+      body:
+        mode: raw
+        raw: |-
+
+          {
+              "old_password":"akki123",
+              "new_password":"raja909",
+              "confirm_password":"raja909"
+          }
+        options:
+          raw:
+            language: json
+      url:
+        raw: localhost:3001/v1/users/change_password
+        host:
+          - localhost
+        port: '3001'
+        path:
+          - v1
+          - users
+          - change_password
+    response: []
